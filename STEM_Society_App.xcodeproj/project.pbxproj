@@ -12,6 +12,7 @@
 		B5BD4A35218A6D050015B4D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5BD4A33218A6D050015B4D2 /* Main.storyboard */; };
 		B5BD4A37218A6D0D0015B4D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5BD4A36218A6D0D0015B4D2 /* Assets.xcassets */; };
 		B5BD4A3A218A6D0D0015B4D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5BD4A38218A6D0D0015B4D2 /* LaunchScreen.storyboard */; };
+		B5BD4A43218A6F3B0015B4D2 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5BD4A42218A6F3B0015B4D2 /* LocalAuthentication.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		B5BD4A36218A6D0D0015B4D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5BD4A39218A6D0D0015B4D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5BD4A3B218A6D0D0015B4D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5BD4A42218A6F3B0015B4D2 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5BD4A43218A6F3B0015B4D2 /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				B5BD4A2E218A6D050015B4D2 /* STEM_Society_App */,
 				B5BD4A2D218A6D050015B4D2 /* Products */,
+				B5BD4A41218A6F3A0015B4D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +66,14 @@
 				B5BD4A3B218A6D0D0015B4D2 /* Info.plist */,
 			);
 			path = STEM_Society_App;
+			sourceTree = "<group>";
+		};
+		B5BD4A41218A6F3A0015B4D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5BD4A42218A6F3B0015B4D2 /* LocalAuthentication.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
