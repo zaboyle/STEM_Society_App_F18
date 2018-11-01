@@ -9,8 +9,9 @@
 import LocalAuthentication
 import UIKit
 
-class ViewController: UIViewController {
 
+class ViewController: UIViewController {
+    
     @IBOutlet weak var label: UILabel!
     
     override func viewDidLoad() {
@@ -19,7 +20,17 @@ class ViewController: UIViewController {
         authenticateUser()
     }
 
-
+    //button press function for those who don't have touchId
+    @IBAction func buttonPressed(_ sender: Any) {
+        if(label.isHidden) {
+            label.isHidden = false
+        }
+        else {
+            label.isHidden = true
+        }
+    }
+    
+    
     func authenticateUser() {
         //Get the local authentication context
         //this is creating a constant of the type LAContext
@@ -33,10 +44,13 @@ class ViewController: UIViewController {
         
         if(context.canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: &error)) {
             
-            [context.evaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, localizedReason: reasonString, reply: { (success: Bool, evalPolicyError: Error?) -> Void in
+            [context.evaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics,
+                                    localizedReason: reasonString,
+                                    reply: { (success: Bool, evalPolicyError: Error?) -> Void in
                 
                 if success {
-                    self.label.textColor = UIColor.blue
+                    //this is what executes when we successfully use touchId!
+                    self.label.isHidden = false
                 }
                 else {
                     print("Authentication Failed")
@@ -52,4 +66,3 @@ class ViewController: UIViewController {
         
     }
 }
-
